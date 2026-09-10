@@ -189,8 +189,8 @@
       <!-- スマホ用レイアウト（女性画像を大きく見せつつ、文字と顔が重ならず、改行も自然） -->
       <div class="block lg:hidden">
         
-        <!-- 上部：女性の大画像 -->
-        <div class="relative w-full h-72 sm:h-84 overflow-hidden bg-slate-100">
+        <!-- 上部：女性の大画像（高さをコンパクトにして文字エリアを上に引き上げ） -->
+        <div class="relative w-full h-56 sm:h-64 overflow-hidden bg-slate-100">
           <img src="images/fv-bg.jpg" alt="リベルテ 女性" class="w-full h-full object-cover object-right-top" onerror="this.src='https://images.hirameki7.io/web-assets/143596/9e504be6-5a7c-4389-bd89-032dedf45ac8.jpg?1764654048201'">
           
           <div class="absolute top-3 left-3 flex flex-wrap gap-1.5 z-10">
@@ -202,21 +202,21 @@
             </span>
           </div>
 
-          <div class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white via-white/80 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white via-white/80 to-transparent"></div>
         </div>
 
-        <!-- 下部：文字エリア（単語単位で折り返し、変な改行を防止） -->
-        <div class="px-4 pt-2 pb-6 space-y-4 bg-white text-center">
+        <!-- 下部：文字エリア（上側に寄せて大きく目立たせる） -->
+        <div class="px-4 pt-1 pb-6 space-y-3.5 bg-white text-center">
 
-          <!-- メインコピー（スマホ用） -->
-          <h1 class="text-2xl sm:text-3xl font-black text-slate-900 leading-tight">
+          <!-- メインコピー（スマホ用：大きく目立たせる） -->
+          <h1 class="text-[26px] sm:text-3xl font-black text-slate-900 leading-tight tracking-tight">
             <span class="inline-block">人を雇わず、利益を育てる</span><br>
             <span class="inline-block text-sky-700 underline decoration-sky-300 decoration-4">新しい店舗経営</span>
           </h1>
 
-          <!-- サブコピー -->
+          <!-- サブコピー（サイズアップ＆上側に配置） -->
           <div>
-            <div class="inline-block bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 font-black text-base sm:text-lg px-4 py-1.5 rounded-xl shadow-md border border-amber-300">
+            <div class="inline-block bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 font-black text-base sm:text-lg px-5 py-2 rounded-xl shadow-md border border-amber-300">
               空きスペースを活用した運営モデル
             </div>
           </div>
@@ -225,28 +225,26 @@
             <p class="text-slate-900 font-black text-base">
               本部だけが儲かる常識を変えたい！
             </p>
-            <p>
-              オーナー様の実働は<strong class="text-sky-700 font-black bg-sky-100 px-1 rounded">週わずか1時間（月4時間）</strong>の清掃と補充のみ。<br>
+            <p class="leading-relaxed">
+              オーナー様の実働は<br>
+              <strong class="text-sky-700 font-black bg-sky-100 px-1.5 py-0.5 rounded inline-block my-0.5">週わずか1時間（月4時間）</strong>の清掃と補充のみ。<br>
               集客・予約・決済はすべて本部が完全バックアップする<span class="inline-block">共存型モデルです。</span>
             </p>
           </div>
 
-          <!-- 3大バッジ（スマホ用・文字サイズ拡大） -->
+          <!-- 3大バッジ（スマホ用・一番下の文字削除＆文字拡大・改行なし） -->
           <div class="grid grid-cols-3 gap-2 pt-1">
-            <div class="bg-emerald-50 p-3 rounded-xl border-2 border-emerald-300 shadow-sm text-center">
-              <span class="text-xs sm:text-sm font-black text-emerald-800 block">実働時間</span>
-              <p class="text-lg sm:text-xl font-black text-emerald-600 my-0.5">月4時間〜</p>
-              <span class="text-[11px] sm:text-xs font-bold text-slate-600 block">現場は清掃のみ</span>
+            <div class="bg-emerald-50 py-3.5 px-1 rounded-2xl border-2 border-emerald-300 shadow-sm text-center flex flex-col justify-center items-center">
+              <span class="text-xs sm:text-sm font-black text-emerald-800 block whitespace-nowrap">実働時間</span>
+              <p class="text-lg sm:text-xl font-black text-emerald-600 mt-0.5 tracking-tight whitespace-nowrap">月4時間〜</p>
             </div>
-            <div class="bg-sky-50 p-3 rounded-xl border-2 border-sky-300 shadow-sm text-center">
-              <span class="text-xs sm:text-sm font-black text-sky-800 block">初期費用</span>
-              <p class="text-lg sm:text-xl font-black text-sky-600 my-0.5">180万円〜</p>
-              <span class="text-[11px] sm:text-xs font-bold text-slate-600 block">空きスペース活用</span>
+            <div class="bg-sky-50 py-3.5 px-1 rounded-2xl border-2 border-sky-300 shadow-sm text-center flex flex-col justify-center items-center">
+              <span class="text-xs sm:text-sm font-black text-sky-800 block whitespace-nowrap">初期費用</span>
+              <p class="text-lg sm:text-xl font-black text-sky-600 mt-0.5 tracking-tight whitespace-nowrap">180万円〜</p>
             </div>
-            <div class="bg-rose-50 p-3 rounded-xl border-2 border-rose-300 shadow-sm text-center">
-              <span class="text-xs sm:text-sm font-black text-rose-800 block">雇用コスト</span>
-              <p class="text-lg sm:text-xl font-black text-rose-600 my-0.5">0円・無人</p>
-              <span class="text-[11px] sm:text-xs font-bold text-slate-600 block">採用リスク完全ゼロ</span>
+            <div class="bg-rose-50 py-3.5 px-1 rounded-2xl border-2 border-rose-300 shadow-sm text-center flex flex-col justify-center items-center">
+              <span class="text-xs sm:text-sm font-black text-rose-800 block whitespace-nowrap">雇用コスト</span>
+              <p class="text-lg sm:text-xl font-black text-rose-600 mt-0.5 tracking-tight whitespace-nowrap">0円・無人</p>
             </div>
           </div>
 
