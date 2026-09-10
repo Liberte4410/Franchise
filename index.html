@@ -525,7 +525,7 @@
         <div class="text-center mb-10">
           <span class="text-sm font-black uppercase tracking-wider text-brand-sky bg-sky-100 px-4 py-1.5 rounded-full">Comparison</span>
           <h2 class="text-2xl sm:text-4xl font-black text-slate-900 mt-3 leading-tight">
-            <span class="inline-block">従来のサロン経営 vs</span> <span class="inline-block text-sky-700">Liberté（リベルテ）</span>
+            <span class="inline-block">従来のサロン経営</span><br class="sm:hidden"><span class="inline-block mx-1">vs</span><br class="sm:hidden"><span class="inline-block text-sky-700">Liberté（リベルテ）</span>
           </h2>
           <p class="text-base sm:text-lg text-slate-700 mt-2 font-bold">一目でわかる、リスクの低さと高効率な収益性</p>
         </div>
@@ -784,8 +784,8 @@
                 </h3>
               </div>
 
-              <div class="text-base text-slate-800 space-y-3 leading-relaxed bg-white p-5 rounded-2xl border-2 border-slate-200 shadow-sm font-bold">
-                <p><strong>株式会社４４１０（ヨンヨンイチゼロ）</strong><br>※Liberte直営店およびパーソナルジムを直営運営</p>
+              <div class="text-base text-slate-800 space-y-3 leading-relaxed bg-white p-4 sm:p-5 rounded-2xl border-2 border-slate-200 shadow-sm font-bold">
+                <p><strong class="text-[13px] min-[360px]:text-[13.5px] min-[390px]:text-base sm:text-base whitespace-nowrap block">株式会社４４１０（ヨンヨンイチゼロ）</strong>※Liberte直営店およびパーソナルジムを直営運営</p>
                 <p><strong>株式会社ViliV（ビリーヴ）</strong><br>※Liberteフランチャイズ本部を運営</p>
               </div>
 
@@ -960,8 +960,28 @@
     </section>
 
     <!-- ==================== 12. お問い合わせ・無料相談フォーム (メインCV) ==================== -->
-    <section id="contact-form-section" class="py-16 sm:py-24 bg-gradient-to-b from-sky-50 via-sky-100/50 to-white border-t-2 border-sky-300">
-      <div class="max-w-4xl mx-auto px-2 min-[390px]:px-4 sm:px-6">
+    <style>
+      @media (max-width: 639px) {
+        #contact-form-section {
+          overflow-x: hidden;
+        }
+        #contact-form-section .glass-card {
+          padding-left: 6px !important;
+          padding-right: 6px !important;
+          box-sizing: border-box !important;
+        }
+        #xhm-form,
+        #xhm-form iframe {
+          width: 100% !important;
+          max-width: 100% !important;
+          min-width: 0 !important;
+          display: block !important;
+          box-sizing: border-box !important;
+        }
+      }
+    </style>
+    <section id="contact-form-section" class="py-16 sm:py-24 bg-gradient-to-b from-sky-50 via-sky-100/50 to-white border-t-2 border-sky-300 overflow-x-hidden">
+      <div class="max-w-4xl mx-auto px-1.5 sm:px-6">
         
         <div class="text-center mb-10">
           <span class="text-sm font-black uppercase tracking-widest text-brand-sky bg-sky-100 px-4 py-1.5 rounded-full">Contact & Consultation</span>
@@ -974,11 +994,11 @@
           </p>
         </div>
 
-        <div class="glass-card rounded-3xl px-2.5 py-6 sm:p-10 border-2 border-sky-300 shadow-2xl bg-white">
+        <div class="glass-card rounded-2xl sm:rounded-3xl px-1.5 py-6 sm:p-10 border-2 border-sky-300 shadow-2xl bg-white max-w-full">
           
           <!-- 指定埋め込みフォーム（form_id=36655） -->
-          <div class="w-full overflow-x-auto">
-            <div id="xhm-form" class="min-h-[420px] w-full"></div>
+          <div class="w-full overflow-hidden">
+            <div id="xhm-form" class="min-h-[420px] w-full max-w-full overflow-hidden"></div>
             <script type="application/javascript" src="https://form.hirameki7.io/form.js?site_id=143596&form_id=36655" charset="UTF-8" defer></script>
           </div>
 
